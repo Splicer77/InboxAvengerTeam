@@ -1,22 +1,24 @@
-Inbox Avenger Starter Project (Java)
+# Inbox Avenger Lite
 
-Folders:
-- src/model
-- src/security
-- src/detection
-- src/app
+A simple Chrome extension prototype for Gmail that:
+- scans visible Gmail inbox rows
+- adds badges like HIGH RISK, LOW PRIORITY, PROMO, or NORMAL
+- reorders visible rows based on a simple rule-based score
 
-Included starter classes:
-- User
-- Email
-- PasswordEntry
-- PasswordVault
-- EncryptionManager
-- RiskScorer
-- PhishingDetector
-- Main
+## Files
+- manifest.json
+- content.js
+- styles.css
 
-Notes:
-- EncryptionManager is currently a placeholder using Base64 for demonstration.
-- Replace it later with real AES encryption for the actual project.
-- Main.java provides a simple test run to show the classes working together.
+## How to install in Chrome
+1. Download and unzip the project folder.
+2. Open Chrome.
+3. Go to `chrome://extensions`
+4. Turn on **Developer mode**.
+5. Click **Load unpacked**.
+6. Select the unzipped `inbox-avenger-lite` folder.
+7. Open Gmail and click **Scan with Inbox Avenger**.
+
+## Notes
+This is a prototype that works by reading the Gmail page structure in your browser.
+It does not connect to the Gmail API and does not permanently relabel messages.
